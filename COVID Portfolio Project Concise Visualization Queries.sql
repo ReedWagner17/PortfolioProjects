@@ -2,7 +2,7 @@
 
 Select SUM(new_cases) as total_cases, SUM(cast(new_deaths as bigint)) as total_deaths, SUM(cast(new_deaths as bigint))/SUM(New_Cases)*100 as DeathPercentage
 From PortfolioProject.dbo.CovidDeaths
-where continent is not null 
+where continent is not null and location not in ('High income', 'Upper middle income', 'Lower middle income', 'Low income')
 --Group By date
 order by 1,2
 
