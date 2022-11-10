@@ -7,7 +7,7 @@ This project utilizes Python in Jupyter Notebooks to check the price of a specif
 
 ---CODE COMMENTS---
 
-In this section I will go section by section explaining what each chunk of code in Jupyter Notebooks does in this program, each chunk will be denoted C followed by a number. For example, the third chunk of code will be: C3.
+In this section I will go code chunk by code chunk explaining what each chunk of code in Jupyter Notebooks does in this program, each chunk will be denoted C followed by a number. For example, the third chunk of code will be: C3.
 
 C1: Here I am importing the libraries that I will be using, smtplib is optional as that library is used for the email notification portion of the code.
 
