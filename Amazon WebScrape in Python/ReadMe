@@ -1,0 +1,32 @@
+---OUTLINE---
+
+This project utilizes Python in Jupyter Notebooks to check the price of a specified item on Amazon each day. The item is currently hardcoded, but the code can be easily changed so that the user can input their own amazon link. The program will write the current price data to an excel file so that the user can see the change in price over time. There is optional code at the end to automatically notify the user via email when the price drops below a threshold the user can define. The email code requires the user to set up an email server to connect to, since not every user may use an email server I made this part optional.
+
+-------------
+
+
+---CODE COMMENTS---
+
+In this section I will go section by section explaining what each chunk of code in Jupyter Notebooks does in this program, each chunk will be denoted C followed by a number. For example, the third chunk of code will be: C3.
+
+C1: Here I am importing the libraries that I will be using, smtplib is optional as that library is used for the email notification portion of the code.
+
+C2: This chunk is where the code connects to amazon via the hardcoded link and parses the title and price of the item on the webpage.
+
+C3: Here we format the variables we want to collect and strip any unnecessary characters. The date of the data gleaning is also recorded.
+
+C4: In this chunk we create a CSV file to store each entry of data, we also write our initial data pull to the file.
+
+C5: This chunk is to check if the data has been written and saved in the CSV file.
+
+C6: Chunk 6 does not need to be used, this chunk appends current data to the CSV and will be used in a later chunk for the automation portion. Running this will just duplicate the initial data in the next row of the CSV.
+
+C7: Here we define a function to do the entire process of checking the price, getting the current date and time, and appending the data to an already established CSV file.
+
+C8: This chunk is the automated part of the code. Every 86400 seconds (1 day) the code will run the function defined to glean data from amazon and save it to the CSV file. The code will run indefinitely until the user stops the program manually. 
+
+C9: This chunk is to check the contents of the CSV file without having to open the file.
+
+C10: The final chunk is optional. This is a function that can be used to send emails to yourself when the price of an item drops below a threshold that you can specify. It is optional since it requires a specific email service that most people probably do not use. 
+
+-------------
