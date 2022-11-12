@@ -1,0 +1,54 @@
+---OUTLINE---
+
+This project utilizes Python in Jupyter Notebooks to analyze a movie dataset from Kaggle and determine correlations between variables in the data. The dataset can be found using this link: https://www.kaggle.com/datasets/danielgrijalvas/movies
+
+In this code I will examine the data, clean any missing/duplicated values, change incorrect datatypes, and finally create correlation graphs/heat maps to determine which variables directly influence each other. From there I will make conclusions based off of my initial findings.
+
+-------------
+
+
+---CODE COMMENTS---
+
+In this section I will go code chunk by code chunk explaining what each chunk of code in Jupyter Notebooks does in this program, each chunk will be denoted by a C followed by a number. For example, the third chunk of code will be: C3.
+
+C1:
+
+C2:
+
+C3:
+
+C4:
+
+C5:
+
+C6:
+
+C7:
+
+C8:
+
+C9:
+
+C10:
+
+C11:
+
+C12:
+
+C13:
+
+C14:
+
+C15:
+
+C16:
+
+C17:
+
+-------------
+
+---CONCLUSIONS---
+
+
+
+-------------
