@@ -11,44 +11,42 @@ In this code I will examine the data, clean any missing/duplicated values, chang
 
 In this section I will go code chunk by code chunk explaining what each chunk of code in Jupyter Notebooks does in this program, each chunk will be denoted by a C followed by a number. For example, the third chunk of code will be: C3.
 
-C1:
+C1: This chunk contains all of the libraries I imported for the project. I also define my dataframe upon reading and importing the CSV file I used as my dataset.
 
-C2:
+C2: Here I use the .head() function to take a quick look at the dataframe to double check everything imported properly.
 
-C3:
+C3: This chunk of code is used to remove any empty entries. I then do a check of each column to determine if any empty values remain.
 
-C4:
+C4: Here I am checking the datatypes of each variable to determine if I need to change any datatypes. I decide for simplicity to convert the float values of budget and gross to integer values.
 
-C5:
+C5: Another .head() function call to check if the conversion was carriedo out correctly.
 
-C6:
+C6: In this chunk I am creating a new variable that displays the correct year of release for a given movie as the information provided is not formatted in an easy way to glean the year.
 
-C7:
+C7 & C8: Here I am sorting entries by their gross value descending.
 
-C8:
+C9: This line is to remove any duplicates from the dataset and finish the data cleaning portion.
 
-C9:
+C10: In this chunk I use the matplotlib package to create a scatterplot comparing the Budget for a film vs the Gross Earnings for a film. 
 
-C10:
+C11: Here I use seaborn to create a best fit line for the scatterplot and change the coloration to be easier to see. As we can see, there is a clear direct correlation.
 
-C11:
+C12: This chunk of code uses a correlation function with the pearson-correlation type to create a correlation matrix of all numerical variables. This allows for easier correlation comparisons across a multitude of variables.
 
-C12:
+C13: Here I am using seaborn and matplotlib to create a correlation matrix heatmap so that strong positive and negative correlations are more apparent at a quick glance. These are all of the numeric variables.
 
-C13:
+C14: Here I am assigning numeric values to all non-numeric variables so that we can create a correlation heatmap of all variables.
 
-C14:
+C15: In this chunk I am using seaborn and matplotlib to create a correlation matrix heatmap so that strong positive and negative correlations are more apparent at a quick glance. These are all of the variables both natively numeric and natively non-numeric.
 
-C15:
-
-C16:
-
-C17:
+C16: Here I create a list of all pairings of variables that have a correlation greater than 0.5 to find the strongest conclusions from the data.
 
 -------------
 
 ---CONCLUSIONS---
 
-
-
+From the visualizations I created I have made the following conclusions about the dataset:
+1) The budget of a movie is directly correlated to how much a movie will gross. Therefore the more a studio invests in their movie the more they should expect to earn.
+2) Company has a low correlation to gross earnings, thus the name of a company is not enough to guarantee a successful movie.
+3) Star and Gross are the closest pair to a correlation coeffiecent of 0. From this we can say that the star of the film has no clear impact on the performance of a film monetarily.
 -------------
