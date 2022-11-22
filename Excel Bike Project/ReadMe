@@ -1,0 +1,24 @@
+---Description---
+
+In this project I use a dataset with information about people in a region who either bought a bike or didn't buy a bike. I will be using Excel to create some visualizations of this dataset to convey clear trends in the data. The Excel sheets are broken down as follows:
+
+1) bike_buyers - This is the raw dataset prior to simple data cleaning.
+
+2) Working Sheet - This is the dataset post data cleaning. All duplicates are removed, Commute Distance range and Age Bracket range fields were adjusted for clarity. I also changed the Marital Status and Gender data presentation to be more readable.
+
+3) Pivot Table - Here I created my three pivot tables that I used for the three visualizations on the dashboard page. Adjustments to the dashboard visualizations can be made on the pivot table sheet.
+
+4) Dashboard - On this sheet I have compiled 3 graphs to help illustrate trends in the data. 
+
+Beginning with the "Avg Income Per Purchase" graph we can see that both male and female people who purchase a bike tend to earn more on average than those who did not buy a bike. Using the provided slicer we can see that this is especially apparent in North America, but not a clear trend in Europe.
+
+Next on the "Customer Age Brackets" graph we can see that the majority of bike owners are middle age while very few adolescents and seniors own bikes.
+
+Lastly on the "Customer Commute Distance" graph we can tell that people are more likely to own a bike if their commute distance is very short as they would have little need for a motor vehicle. Interestingly, North Americans are most likely to own a bike if their commute is 2-5 miles. Thus I predict this is because they don't actually use a bike to get to work, but rather use a bike for leisure.
+
+Therefore the main takeaways in a business sense are as follows:
+1) We are more likely to sell a bike to a customer, regardless of gender, who makes above the average salary.
+2) We should market towards middle age people (31-54) as they make up almost the entire historical customer base.
+3) In North America we should market our bikes as a leisure activity and in Europe we should market our bikes as an inexpensive transportation tool.
+
+------------------------------
