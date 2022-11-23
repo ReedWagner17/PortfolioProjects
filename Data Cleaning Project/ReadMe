@@ -1,1 +1,28 @@
 ---Description---
+
+The SQL code for my data cleaning process is split into 6 main sections. In this readme I will be giving short descriptions of my SQL queries for clarity.
+The sections are broken down as follows:
+1. Date Standardization
+2. Populating Null Address Entries
+3. Splitting Address Entries Into Individual Columns
+4. Adjusting Y/N to Yes/No for Uniformity and Consistency
+5. Removal of Duplicates
+6. Deleting Unecessary Columns
+
+------------------
+
+---SQL Code Descriptions---
+
+1. Here I am adding a new column to store the date conversion. Then I assign the converted values to the new column. Lastly I use a SELECT statement to double check if the conversion was successful.
+
+2. I noticed that some of the addresses have NULL values in the raw dataset. There are also duplicate values for the ParcelID identifier for many of the entries. In fact, all entries with NULL addresses share a ParcelID with entries that do have an Address value. Thus I used a self join on the table to find entries that share ParcelID but have different UniqueIDs (the primary key of the table). Then I take the address value from the non-null entry and change the corresponding null entry to match it. Therefore all entries with matching ParcelIDs will also have matching address values.
+
+3. Here I am first splitting the PropertyAddress column into individual Address and City columns for ease of use. Next I parse the OwnerAddress column into Address, City, and State columns using the PARSENAME function and a sub-REPLACE function to format the entries to be useful in PARSENAME.
+
+4. In the data most of the entries in the SoldAsVacant column were marked as 'Yes' and 'No', though there were a few marked as 'Y' and 'N'. For uniformity and consistency I updated the Y/N values to Yes/No values respectively.
+
+5. Here I am deleting duplicate rows by using CTE. I use the ROW_NUMBER() strategy and use a CTE with ROW_NUMBER() strategy to check if any duplicates still exist.
+
+6. Not all columns in the raw data are useful going forward in my opinion. I decided to drop OwnerAddress, TaxDistrict, PropertyAddress, SaleDate since 3 of those columns needed to either be manipulated or split to be useful. TaxDistrict is not needed for any analysis that I would want to perform.
+
+------------------
