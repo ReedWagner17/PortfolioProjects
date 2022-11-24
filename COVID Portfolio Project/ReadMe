@@ -1,0 +1,21 @@
+---Overview---
+
+This readme will be a guide to the SQL code in Concise Visualization Queries.sql. The data exploration file "Data Exploration.sql" contains the queries I used to explore the two COVID datasets I used. Once I familiarized myself with the data and formulated ideas on what I wanted to visualize in Tableau, I compiled a short list of 4 queries in Concise Visualization Queries.sql. These queries allowed me to pull specific portions of data from the dataset to give a clear picture of COVID impact.
+
+***NOTE: The Tableau dashboard associated with this project is on my Tableau Public profile. This can be accessed through my portfolio website or directly through this link: https://public.tableau.com/app/profile/reed5695/viz/CovidDashboard_16624310725540/Dashboard1
+
+--------------
+
+---Concise Visualization Queries Breakdown---
+
+Note: In the location column of the dataset the author chose to include entries with "Low Income, Medium Income, etc.". My WHERE clauses will exclude these entries as they do not relate to the locational portion I am utilizing.
+
+Query 1: This query showcases the total global cases of COVID, the total global deaths associated with COVID, and the percentage of global deaths due to COVID.
+
+Query 2: This query allows us to look at total deaths due to COVID broken down by continent. I use "WHERE continent IS NULL" to eliminate entries that are not relevant due to dataset formatting. Necessary continent data is still preserved.
+
+Query 3: This query is used to display the percent of the population infected in a specific country. I used a global map as the visualization so that users can easily compare a country of interest to all other countries.
+
+Query 4: This query gives us the percent of population infected by COVID over time grouped by each country. Since we are looking at data over time, I used a line graph with each line representing a country. I limited the visualization to a select few so that the time series was digestible and readable. From this I also provided a rudimentary projection of where the percent of population infected will go (as of August 2022). We can already fact check and see if the projections were accurate.
+
+-----------------------------------------------
